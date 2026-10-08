@@ -547,6 +547,11 @@ dependencies = [
     { name = "selenium" },
 ]
 
+[package.dev-dependencies]
+dev = [
+    { name = "pytest" },
+]
+
 [package.metadata]
 requires-dist = [
     { name = "cryptography" },
@@ -556,6 +561,9 @@ requires-dist = [
     { name = "requests" },
     { name = "selenium" },
 ]
+
+[package.metadata.requires-dev]
+dev = [{ name = "pytest", specifier = ">=9.1.1" }]
 
 [[package]]
 name = "trio"
