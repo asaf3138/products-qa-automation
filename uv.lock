@@ -542,7 +542,6 @@ dependencies = [
     { name = "cryptography" },
     { name = "flask" },
     { name = "pymysql" },
-    { name = "pytest" },
     { name = "requests" },
     { name = "selenium" },
 ]
@@ -557,7 +556,6 @@ requires-dist = [
     { name = "cryptography" },
     { name = "flask" },
     { name = "pymysql" },
-    { name = "pytest" },
     { name = "requests" },
     { name = "selenium" },
 ]

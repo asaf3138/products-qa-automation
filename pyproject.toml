@@ -9,7 +9,6 @@ dependencies = [
     "selenium",
     "requests",
     "cryptography",
-    "pytest",
 ]
 
 [dependency-groups]
