@@ -86,7 +86,6 @@ def test_create_product_success(test_db):
 # -------------------------------------------------
 # TEST 2 - Duplicate product name
 # -------------------------------------------------
-
 def test_create_product_duplicate_name(test_db):
     # ARRANGE - Create a product with a unique name
     unique_name = f"QA-{uuid.uuid4().hex[:12]}"
@@ -137,7 +136,6 @@ def test_create_product_duplicate_name(test_db):
 # -------------------------------------------------
 # TEST 3 - Missing product name
 # -------------------------------------------------
-
 def test_create_product_null_name(test_db):
     # ARRANGE - Create a product without a name
     product = Product(
@@ -152,10 +150,11 @@ def test_create_product_null_name(test_db):
         product_repository.create_product(product)
 
 
+
+
 # -------------------------------------------------
 # TEST 4 - Product name longer than 50 characters
 # -------------------------------------------------
-
 def test_create_product_name_too_long(test_db):
     # ARRANGE - Create a product with 51 characters
     long_name = "A" * 51
@@ -173,10 +172,10 @@ def test_create_product_name_too_long(test_db):
 
 
 
+
 # -------------------------------------------------
 # TEST 5 - Read an existing product
 # -------------------------------------------------
-
 def test_read_one_existing_product(test_db):
     # ARRANGE - Prepare a unique test product
     unique_name = f"QA-{uuid.uuid4().hex[:12]}"
@@ -213,10 +212,11 @@ def test_read_one_existing_product(test_db):
 
 
 
+
+
 # -------------------------------------------------
 # TEST 6 - Read a product that does not exist
 # -------------------------------------------------
-
 def test_read_one_non_existing_product(test_db):
     # ARRANGE - Find an ID that does not exist
     # in the test database
@@ -241,10 +241,10 @@ def test_read_one_non_existing_product(test_db):
 
 
 
+
 # -------------------------------------------------
 # TEST 7 - Read all products
 # -------------------------------------------------
-
 def test_read_all_products(test_db):
     # ARRANGE - Create a unique test product
     unique_name = f"QA-{uuid.uuid4().hex[:12]}"
@@ -294,10 +294,10 @@ def test_read_all_products(test_db):
 
 
 
+
 # -------------------------------------------------
 # TEST 8 - Update an existing product
 # -------------------------------------------------
-
 def test_update_existing_product(test_db):
     # ARRANGE - Create a product
     unique_name = f"QA-{uuid.uuid4().hex[:12]}"
@@ -342,10 +342,10 @@ def test_update_existing_product(test_db):
 
 
 
+
 # -------------------------------------------------
 # TEST 9 - Update a product that does not exist
 # -------------------------------------------------
-
 def test_update_non_existing_product(test_db):
     # ARRANGE - Find an ID that does not exist
     import pymysql
@@ -384,10 +384,10 @@ def test_update_non_existing_product(test_db):
 
 
 
+
 # -------------------------------------------------
 # TEST 10 - Delete an existing product
 # -------------------------------------------------
-
 def test_delete_existing_product(test_db):
     # ARRANGE - Create a product for deletion
     unique_name = f"QA-{uuid.uuid4().hex[:12]}"
@@ -426,10 +426,11 @@ def test_delete_existing_product(test_db):
 
 
 
+
+
 # -------------------------------------------------
 # TEST 11 - Delete a product that does not exist
 # -------------------------------------------------
-
 def test_delete_non_existing_product(test_db):
     # ARRANGE - Find an ID that does not exist
     import pymysql

@@ -6,9 +6,6 @@ from unittest.mock import patch
 from models.models import Product
 
 
-# -------------------------------------------------
-# API TEST 1 - Get all products successfully
-# -------------------------------------------------
 @pytest.fixture  #מכין סביבת בדיקה שניתן להשתמש בה בבדיקות
 def client():
 
@@ -27,6 +24,10 @@ def client():
         yield test_client
 
 
+
+# -------------------------------------------------
+# API TEST 1 - Get all products successfully
+# -------------------------------------------------
 def test_get_all_products_success(client):
 
     # ARRANGE - Prepare products returned by Service
